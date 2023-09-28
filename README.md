@@ -7,7 +7,7 @@
 
 <div align="center">
   <h3>
-    <a href="">
+    <a href="https://vishalsharma1777.github.io/portfolio-project/">
       Demo
     </a>
     <span> | </span>
@@ -31,6 +31,9 @@
 - [Contact](#contact)
 
 <!-- OVERVIEW -->
+
+![](screenshot/ss1.png)
+![](screenshot/ss2.png)
 
 ## Overview
 
