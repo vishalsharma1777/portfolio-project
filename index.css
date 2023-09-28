@@ -1,0 +1,570 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colors */
+  --blue: #755cde;
+  --orange: #f6a560;
+  --pink: #f39e9e;
+  --red: #eb7565;
+  --green: #61c4b7;
+  --maroon: #552049;
+  --black: #030303;
+  --grey: #7a746e;
+  --white: #fff7f0;
+
+  /*Typography*/
+  --extra-small: 1rem;
+  --normal-font: 1.5rem;
+  --normal-line: 1.75rem;
+  --small-font: 2rem;
+  --small-line: 2.2222rem;
+  --medium-font: 2.5rem;
+  --medium-line: 2.8333rem;
+  --large-font: 3.5rem;
+  --large-line: 3.8889rem;
+  --normal-weight: 500;
+  --bold-weight: 700;
+
+  /*Margins*/
+  --margin-small: 0.5rem;
+  --margin-medium: 1rem;
+  --margin-large: 1.5rem;
+
+  /* Radius */
+  --small-radius: 1rem;
+}
+
+html {
+  font-family: 'Plus Jakarta Sans';
+  max-width: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+}
+
+.container {
+  display: block;
+  width: 80%;
+  margin-top: var(--margin-large);
+  margin-bottom: var(--margin-large);
+}
+
+header,
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5rem;
+}
+
+.toggle {
+  height: 4rem;
+  width: 4rem;
+}
+
+.navButton,
+.profileButton,
+.callButton {
+  cursor: pointer;
+  width: 14.25rem;
+  height: 3.5rem;
+  border-radius: 1.75rem;
+  font-family: 'Plus Jakarta Sans';
+  font-size: var(--extra-small);
+  background-color: var(--black);
+  color: var(--white);
+  font-weight: var(--normal-weight);
+  border: none;
+}
+
+.navButton:hover {
+  border-color: var(--blue);
+  background-color: var(--blue);
+}
+
+.intro {
+  height: 13rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  justify-content: center;
+  margin-bottom: var(--margin-large);
+}
+
+.title {
+  text-align: center;
+  font-size: var(--large-font);
+  font-weight: var(--bold-weight);
+  line-height: var(--large-line);
+}
+
+.description {
+  width: 60%;
+  text-align: center;
+  font-size: var(--normal-font);
+  font-weight: var(--normal-weight);
+  color: var(--grey);
+}
+
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+  height: 20rem;
+}
+
+.tile {
+  position: relative;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.tileIcon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.tile1 {
+  grid-area: 1/1/2/3;
+  background-color: var(--blue);
+}
+
+.tile1 {
+  grid-area: 1/1/3/3;
+  background-color: var(--blue);
+}
+
+.tile2 {
+  grid-area: 1/3/2/4;
+  background-color: var(--orange);
+}
+
+.tile3 {
+  grid-area: 1/4/2/5;
+  background-color: var(--pink);
+}
+
+.tile4 {
+  grid-area: 1/5/2/7;
+  background-color: var(--green);
+}
+
+.tile5 {
+  grid-area: 2/3/3/5;
+  background-color: var(--red);
+}
+
+.tile6 {
+  grid-area: 2/5/3/7;
+  background-color: var(--maroon);
+}
+
+.icon1 {
+  width: 8rem;
+  height: 12rem;
+}
+
+.icon2,
+.icon3 {
+  width: 4rem;
+  height: 4rem;
+}
+
+.icon4 {
+  width: 10rem;
+  height: 4rem;
+}
+
+.icon5,
+.icon6 {
+  width: 8rem;
+  height: 4rem;
+}
+
+.tileTag {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  color: var(--white);
+  font-weight: var(--bold-weight);
+  font-size: var(--normal-font);
+}
+
+.bio {
+  margin-top: 5rem;
+  margin-bottom: var(--margin-large);
+  height: 25rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.profileImg {
+  position: relative;
+  width: 22rem;
+  height: 22rem;
+  border-radius: 50%;
+  background-color: var(--green);
+  overflow: hidden;
+}
+
+.mainPic {
+  position: absolute;
+  transform: rotate(5deg);
+  height: 20rem;
+  width: 20rem;
+  top: 2rem;
+  left: 0rem;
+  z-index: 2;
+}
+.picIcon1 {
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  height: 8rem;
+  width: 7rem;
+  z-index: 1;
+}
+
+.picIcon2 {
+  position: absolute;
+  bottom: 3rem;
+  right: 0;
+  height: 8rem;
+  width: 8rem;
+  z-index: 1;
+}
+
+.profileAbout {
+  width: 50%;
+  overflow: hidden;
+}
+
+.profileHeading,
+.callTitle {
+  margin-top: 3rem;
+  font-size: var(--medium-font);
+  font-weight: var(--bold-weight);
+  line-height: var(--medium-line);
+  margin-bottom: 2rem;
+}
+
+.profileDescription,
+.callDescription {
+  color: var(--grey);
+  font-size: var(--normal-font);
+  margin-bottom: 2rem;
+}
+
+.profileButton,
+.callButton {
+  background-color: var(--red);
+  background-color: var(--red);
+}
+
+.profileButton:hover {
+  background-color: var(--orange);
+  background-color: var(--orange);
+}
+
+.myWork {
+  height: 40rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.myTitle {
+  display: flex;
+  justify-content: center;
+  font-size: var(--medium-font);
+  font-weight: var(--bold-weight);
+}
+
+img {
+  height: 20rem;
+  width: 20rem;
+}
+
+.slidebar {
+  overflow-x: scroll;
+  width: 99vw;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.arrows {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: var(--margin-large);
+}
+
+.arrow {
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+}
+
+.fa-solid {
+  font-size: 4rem;
+  color: var(--black);
+}
+
+.fa-solid:hover {
+  color: var(--blue);
+}
+
+.call {
+  height: 20rem;
+  background-color: var(--black);
+  color: var(--white);
+  border-radius: var(--small-radius);
+  margin-top: var(--margin-large);
+  margin-bottom: var(--margin-large);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.callAbout {
+  width: 60%;
+}
+.callDescription {
+  color: var(--white);
+}
+
+.callTitle {
+  font-size: var(--medium-font);
+}
+.callButton:hover {
+  background-color: var(--orange);
+  background-color: var(--orange);
+}
+
+footer {
+  height: 5rem;
+}
+
+@media screen and (min-width: 900px) and (max-width: 1300px) {
+  .container {
+    width: 90%;
+  }
+  .title {
+    font-size: var(--medium-font);
+  }
+
+  .bio{
+    height: 35rem;
+  }
+
+  .profileImg {
+    width: 20rem;
+    height: 20rem;
+  }
+  .profileHeading {
+    margin-top: 1rem;
+    font-size: var(--medium-font);
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 900px) {
+  .container {
+    width: 90%;
+  }
+
+  .intro {
+    margin-top: 3rem;
+    height: 10rem;
+    gap: 2rem;
+  }
+  .title {
+    font-size: var(--medium-font);
+    font-weight: var(--bold-weight);
+  }
+  .description {
+    width: 80%;
+  }
+
+  .tiles {
+    height: 35rem;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .tile1 {
+    grid-area: 1/1/3/2;
+  }
+  .tile2 {
+    grid-area: 1/2/2/3;
+  }
+  .tile3 {
+    grid-area: 1/3/2/4;
+  }
+  .tile4 {
+    grid-area: 3/1/3/2;
+  }
+  .tile5 {
+    grid-area: 2/2/3/4;
+  }
+  .tile6 {
+    grid-area: 3/2/4/4;
+  }
+
+  .tileTag {
+    font-size: 1.5rem;
+  }
+
+  .bio {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5rem;
+  }
+  .profileImg {
+    position: relative;
+    left: -1rem;
+    transform: translateX(-5rem);
+  }
+  .profileAbout {
+    transform: translateX(-3rem);
+    overflow: hidden;
+  }
+  .profileHeading {
+    margin-top: 1rem;
+    font-size: var(--small-font);
+  }
+
+  .profileButton,
+  .callButton {
+    height: 3rem;
+  }
+  .call {
+    height: 20rem;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .callAbout {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .callTitle {
+    font-size: var(--medium-font);
+    text-align: center;
+  }
+
+  .callDescription {
+    text-align: center;
+  }
+
+  .callButton {
+    position: relative;
+    top: -2rem;
+    margin-top: var(--margin-small);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    width: 90%;
+  }
+  .intro {
+    height: 20rem;
+  }
+
+  .description{
+    width: 80%;
+  }
+
+  .tiles{
+    height: 90rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6,1fr);
+    border-radius: var(--small-radius);
+    gap:2rem;
+  }
+
+  .tile1{
+    grid-area: 1/1/3/3;
+  }
+  .tile2{
+    grid-area: 3/1/4/2;
+  }
+  .tile3{
+    grid-area: 3/2/4/3;
+  }.tile4{
+    grid-area: 4/1/5/3;
+  }.tile5{
+    grid-area: 5/1/6/3;
+  }.tile6{
+    grid-area: 6/1/7/3;
+  }
+
+  .tileTag{
+    font-size: var(--medium-font);
+    bottom:2rem;
+    left: 2rem;
+  }
+
+  .tileIcon{
+    top:2rem;
+    right: 2rem;
+  }
+
+  .bio{
+    height: 60rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .profileImg{
+    padding: 15rem;
+  }
+
+  .mainPic{
+    height: 30rem;
+    width: 25rem;
+  }
+
+  .profileAbout{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+
+  .call{
+    flex-direction: column;
+    height: 30rem;
+  }
+
+  .callAbout{
+    width: 80%;
+    text-align: center;
+  }
+
+  .callButton{
+    position: relative;
+    top: -2rem;
+    }
+
+}
