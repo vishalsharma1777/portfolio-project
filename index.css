@@ -33,6 +33,8 @@
   --margin-small: 0.5rem;
   --margin-medium: 1rem;
   --margin-large: 1.5rem;
+  --bottom-margin: 5rem;
+  --mobile-margin: 2.5rem;
 
   /* Radius */
   --small-radius: 1rem;
@@ -47,15 +49,13 @@ body {
   padding: 0;
   margin: 0;
   max-width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: var(--white);
 }
 
 .container {
   display: block;
   width: 80%;
+  margin: 0 auto;
   margin-top: var(--margin-large);
   margin-bottom: var(--margin-large);
 }
@@ -65,45 +65,41 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 5rem;
+  margin-bottom: var(--bottom-margin);
 }
 
 .toggle {
-  height: 4rem;
   width: 4rem;
 }
 
-.navButton,
-.profileButton,
-.callButton {
+.button {
   cursor: pointer;
   width: 14.25rem;
   height: 3.5rem;
   border-radius: 1.75rem;
+  border: none;
   font-family: 'Plus Jakarta Sans';
   font-size: var(--extra-small);
+  font-weight: var(--normal-weight);
   background-color: var(--black);
   color: var(--white);
-  font-weight: var(--normal-weight);
-  border: none;
 }
 
 .navButton:hover {
-  border-color: var(--blue);
   background-color: var(--blue);
 }
 
 .intro {
-  height: 13rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
   justify-content: center;
-  margin-bottom: var(--margin-large);
+  margin-bottom: var(--bottom-margin);
 }
 
-.title {
+.title,
+h1 {
   text-align: center;
   font-size: var(--large-font);
   font-weight: var(--bold-weight);
@@ -113,7 +109,7 @@ footer {
 .description {
   width: 60%;
   text-align: center;
-  font-size: var(--normal-font);
+  font-size: var(--extra-small);
   font-weight: var(--normal-weight);
   color: var(--grey);
 }
@@ -124,6 +120,7 @@ footer {
   grid-template-rows: repeat(2, 1fr);
   gap: 1rem;
   height: 20rem;
+  margin-bottom: 8rem;
 }
 
 .tile {
@@ -138,61 +135,50 @@ footer {
   right: 1rem;
 }
 
-.tile1 {
-  grid-area: 1/1/2/3;
-  background-color: var(--blue);
-}
 
-.tile1 {
+.GraphicDesignTile {
   grid-area: 1/1/3/3;
   background-color: var(--blue);
 }
 
-.tile2 {
+.UITile {
   grid-area: 1/3/2/4;
   background-color: var(--orange);
 }
 
-.tile3 {
+.appsTile {
   grid-area: 1/4/2/5;
   background-color: var(--pink);
 }
 
-.tile4 {
+.photographyTile {
   grid-area: 1/5/2/7;
   background-color: var(--green);
 }
 
-.tile5 {
+.illustrationsTile {
   grid-area: 2/3/3/5;
   background-color: var(--red);
 }
 
-.tile6 {
+.motionGraphicsTile {
   grid-area: 2/5/3/7;
   background-color: var(--maroon);
 }
 
-.icon1 {
+.icon1,
+.icon5,
+.icon6 {
   width: 8rem;
-  height: 12rem;
 }
 
 .icon2,
 .icon3 {
   width: 4rem;
-  height: 4rem;
 }
 
 .icon4 {
   width: 10rem;
-  height: 4rem;
-}
-
-.icon5,
-.icon6 {
-  width: 8rem;
-  height: 4rem;
 }
 
 .tileTag {
@@ -205,17 +191,15 @@ footer {
 }
 
 .bio {
-  margin-top: 5rem;
-  margin-bottom: var(--margin-large);
-  height: 25rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin-bottom: var(--bottom-margin);
 }
 
 .profileImg {
   position: relative;
-  width: 22rem;
-  height: 22rem;
+  width: 30rem;
+  height: 30rem;
   border-radius: 50%;
   background-color: var(--green);
   overflow: hidden;
@@ -224,18 +208,17 @@ footer {
 .mainPic {
   position: absolute;
   transform: rotate(5deg);
-  height: 20rem;
-  width: 20rem;
-  top: 2rem;
+  width: 25rem;
+  top: 5rem;
   left: 0rem;
   z-index: 2;
 }
 .picIcon1 {
   position: absolute;
-  top: 5rem;
+  top: 8rem;
   left: 0;
   height: 8rem;
-  width: 7rem;
+  width: 8rem;
   z-index: 1;
 }
 
@@ -249,8 +232,9 @@ footer {
 }
 
 .profileAbout {
-  width: 50%;
+  width: 45%;
   overflow: hidden;
+  margin-top: var(--margin-large);
 }
 
 .profileHeading,
@@ -265,7 +249,7 @@ footer {
 .profileDescription,
 .callDescription {
   color: var(--grey);
-  font-size: var(--normal-font);
+  font-size: var(--extra-small);
   margin-bottom: 2rem;
 }
 
@@ -281,11 +265,11 @@ footer {
 }
 
 .myWork {
-  height: 40rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  margin-bottom: var(--bottom-margin);
 }
 
 .myTitle {
@@ -295,9 +279,10 @@ footer {
   font-weight: var(--bold-weight);
 }
 
-img {
+.scrollImage {
   height: 20rem;
   width: 20rem;
+  border-radius: var(--small-radius);
 }
 
 .slidebar {
@@ -314,7 +299,6 @@ img {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  margin-bottom: var(--margin-large);
 }
 
 .arrow {
@@ -333,12 +317,11 @@ img {
 }
 
 .call {
-  height: 20rem;
   background-color: var(--black);
   color: var(--white);
   border-radius: var(--small-radius);
-  margin-top: var(--margin-large);
-  margin-bottom: var(--margin-large);
+  margin-bottom: var(--bottom-margin);
+  padding: 3rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -360,39 +343,40 @@ img {
 }
 
 footer {
-  height: 5rem;
+  margin-bottom: 3rem;
 }
 
-@media screen and (min-width: 900px) and (max-width: 1300px) {
-  .container {
-    width: 90%;
-  }
-  .title {
-    font-size: var(--medium-font);
-  }
-
-  .bio{
-    height: 35rem;
-  }
-
+@media screen and (min-width: 1050px) and (max-width: 1150px) {
   .profileImg {
-    width: 20rem;
-    height: 20rem;
+    width: 28rem;
+    height: 28rem;
   }
   .profileHeading {
     margin-top: 1rem;
-    font-size: var(--medium-font);
   }
 }
 
-@media screen and (min-width: 700px) and (max-width: 900px) {
+@media screen and (min-width: 950px) and (max-width: 1050px) {
+  .profileImg {
+    width: 25rem;
+    height: 25rem;
+  }
+
+  .mainPic {
+    width: 22rem;
+  }
+  .profileHeading {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 950px) {
   .container {
     width: 90%;
   }
 
   .intro {
     margin-top: 3rem;
-    height: 10rem;
     gap: 2rem;
   }
   .title {
@@ -400,7 +384,7 @@ footer {
     font-weight: var(--bold-weight);
   }
   .description {
-    width: 80%;
+    width: 70%;
   }
 
   .tiles {
@@ -410,22 +394,22 @@ footer {
     gap: 1rem;
   }
 
-  .tile1 {
+  .GraphicDesignTile {
     grid-area: 1/1/3/2;
   }
-  .tile2 {
+  .UITile {
     grid-area: 1/2/2/3;
   }
-  .tile3 {
+  .appsTile {
     grid-area: 1/3/2/4;
   }
-  .tile4 {
+  .photographyTile {
     grid-area: 3/1/3/2;
   }
-  .tile5 {
+  .illustrationsTile {
     grid-area: 2/2/3/4;
   }
-  .tile6 {
+  .motionGraphicsTile {
     grid-area: 3/2/4/4;
   }
 
@@ -437,7 +421,7 @@ footer {
     width: 100%;
     align-items: center;
     justify-content: center;
-    margin-bottom: 5rem;
+    margin-bottom: var(--bottom-margin);
   }
   .profileImg {
     position: relative;
@@ -458,7 +442,6 @@ footer {
     height: 3rem;
   }
   .call {
-    height: 20rem;
     flex-direction: column;
     justify-content: center;
   }
@@ -483,88 +466,219 @@ footer {
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (min-width: 500px) and (max-width: 700px) {
   .container {
     width: 90%;
   }
-  .intro {
-    height: 20rem;
-  }
 
-  .description{
+  .description {
     width: 80%;
   }
 
-  .tiles{
+  .tiles {
     height: 90rem;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(6,1fr);
+    grid-template-rows: repeat(6, 1fr);
     border-radius: var(--small-radius);
-    gap:2rem;
+    gap: 2rem;
   }
 
-  .tile1{
+  .GraphicDesignTile {
     grid-area: 1/1/3/3;
   }
-  .tile2{
+  .UITile {
     grid-area: 3/1/4/2;
   }
-  .tile3{
+  .appsTile {
     grid-area: 3/2/4/3;
-  }.tile4{
+  }
+  .photographyTile {
     grid-area: 4/1/5/3;
-  }.tile5{
+  }
+  .illustrationsTile {
     grid-area: 5/1/6/3;
-  }.tile6{
+  }
+  .motionGraphicsTile {
     grid-area: 6/1/7/3;
   }
 
-  .tileTag{
+  .tileTag {
     font-size: var(--medium-font);
-    bottom:2rem;
+    bottom: 2rem;
     left: 2rem;
   }
 
-  .tileIcon{
-    top:2rem;
+  .tileIcon {
+    top: 2rem;
     right: 2rem;
   }
 
-  .bio{
-    height: 60rem;
+  .bio {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
-  .profileImg{
+  .profileImg {
     padding: 15rem;
   }
 
-  .mainPic{
+  .mainPic {
     height: 30rem;
     width: 25rem;
   }
 
-  .profileAbout{
+  .profileAbout {
     width: 100%;
     height: 100%;
     text-align: center;
   }
 
-  .call{
+  .call {
     flex-direction: column;
-    height: 30rem;
   }
 
-  .callAbout{
+  .callAbout {
     width: 80%;
     text-align: center;
   }
 
-  .callButton{
+  .callButton {
     position: relative;
-    top: -2rem;
-    }
+    top: 1rem;
+  }
+}
 
+@media screen and (max-width: 500px) {
+
+  .container {
+    width: 90%;
+  }
+
+  header {
+    margin-bottom: var(--mobile-margin);
+  }
+
+  .toggle {
+    width: 2rem;
+  }
+  .button {
+    width: 10.25rem;
+    height: 2.5rem;
+  }
+
+  h1 {
+    font-size: var(--medium-font);
+  }
+
+  .description {
+    width: 85%;
+  }
+
+  .tiles {
+    height: 80rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    border-radius: var(--small-radius);
+    gap: 2rem;
+  }
+
+  .GraphicDesignTile {
+    grid-area: 1/1/3/3;
+  }
+  .UITile {
+    grid-area: 3/1/4/2;
+  }
+  .appsTile {
+    grid-area: 3/2/4/3;
+  }
+  .photographyTile {
+    grid-area: 4/1/5/3;
+  }
+  .illustrationsTile {
+    grid-area: 5/1/6/3;
+  }
+  .motionGraphicsTile {
+    grid-area: 6/1/7/3;
+  }
+
+  .tileTag {
+    font-size: var(--small-font);
+    font-weight: var(--small-weight);
+    bottom: 1rem;
+    left: 1rem;
+  }
+
+  .tileIcon {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .bio {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .profileImg {
+    padding: 1rem;
+    width: 20rem;
+    height: 20rem;
+  }
+
+  .mainPic {
+    height: 15rem;
+    width: 17rem;
+  }
+
+  .picIcon1,
+  .picIcon2 {
+    height: 5rem;
+    width: 5rem;
+  }
+
+  .profileAbout {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+
+  .profileHeading {
+    font-size: var(--small-font);
+    line-height: var(--small-line);
+  }
+
+  .scrollImage {
+    height: 15rem;
+    width: 15rem;
+  }
+
+  .fa-solid {
+    font-size: 3rem;
+  }
+
+  .call {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .callAbout {
+    width: 90%;
+    text-align: center;
+  }
+
+  .callTitle {
+    font-size: var(--normal-font);
+    line-height: var(--small-line);
+  }
+
+  .callDescription {
+    font-size: var(--extra-small);
+    line-height: var(--normal-line);
+  }
+
+  .callButton {
+    position: relative;
+    top: 0rem;
+  }
 }
